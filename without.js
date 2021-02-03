@@ -26,17 +26,37 @@ const assertArraysEqual = function(arrOne, arrTwo) {
 // return a new array not changing source array
 // new array doesnt have itemsToRemove
 
+// const without = (source, itemsToRemove) => {
+//   let newArr = [];
+//   for (let sourceItem of source) {
+//     for (let removeItem of itemsToRemove) {
+//       if (sourceItem !== removeItem) {
+//         newArr.push(sourceItem);
+//       }
+//     }
+//   }
+//   return (newArr);
+// };
+
+// Uses .indexOf to remove array element => DOESN'T WORK
+// ITEM INDEX CHANGES AS THINGS ARE DELETED WITH SPLICE
 const without = (source, itemsToRemove) => {
   let newArr = [];
+  // loop through both arrays
   for (let sourceItem of source) {
     for (let removeItem of itemsToRemove) {
-      if (removeItem !== sourceItem) {
-        newArr.push(sourceItem);
+      if (removeItem === sourceItem) {
+        let itemIndex = source.indexOf(removeItem);
+        newArr = source.splice(itemIndex, 1);
       }
     }
   }
-  return (newArr);
+  return newArr;
+  // if elements === each other, find indexOf
+  // use splice to remove that element
+  //return new array
 };
+
 
 // Test cases
 console.log(without([1, 2, 3], [1])); // => [2, 3]
