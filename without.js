@@ -73,6 +73,17 @@ const without = (source, itemsToRemove) => {
   return filteredList;
 };
 
+//USE INCLUDE METHOD => ALSO WORKS
+// const without = function(source, itemsToRemove) {
+//   let newArray = [];
+//   for (let i = 0; i < source.length; i++) {
+//     if (!itemsToRemove.includes(source[i])) {
+//       newArray.push(source[i]);
+//     }
+//   }
+//   return newArray;
+// };
+
 // Test cases
 console.log(without([1, 2, 3], [1])); // => [2, 3]
 console.log(without([1, 2, 3, 1], [1])); // => [2, 3]
