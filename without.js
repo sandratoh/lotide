@@ -64,9 +64,7 @@ const without = (source, itemsToRemove) => {
   for (let sourceItem of source) {
     for (let removeItem of itemsToRemove) {
       if (removeItem === sourceItem) {
-        filteredList = source.filter(function(value) {
-          return value !== removeItem;
-        });
+        filteredList = source.filter((item) => item !== removeItem);
       }
     }
   }
