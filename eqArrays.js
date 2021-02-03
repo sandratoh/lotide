@@ -8,25 +8,26 @@ const assertEqual = function(actual, expected) {
 
 // Declare equalizing array function
 const eqArrays = (arrOne, arrTwo) => {
-  // If arrays lengths are equal, run codes
-  if (arrOne.length === arrTwo.length) {
-    for (let i = 0; i < arrOne.length; i++) {
-      // Feturn false if arrOne and arrTwo elements are different
-      if (arrOne[i] !== arrTwo[i]) {
-        return false;
-      } else {
-        return true;
-      }
-    }
-  } else {
+  // If arrays lengths are not equal, stop running codes
+  if (arrOne.length !== arrTwo.length) {
     return false;
   }
+  for (let i = 0; i < arrOne.length; i++) {
+    // Feturn false if arrOne and arrTwo elements are different
+    if (arrOne[i] !== arrTwo[i]) {
+      return false;
+    }
+  }
+  return true;
 };
 
 // TEST CODES
 console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
-console.log(eqArrays([1, 2, 3], [1, 2, 3, 4])); // => false
 console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
+console.log(eqArrays([1, 2, 3], [1, 2, 3, 4])); // => false
 
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => false
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
+console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
+
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => PASS
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => PASS
