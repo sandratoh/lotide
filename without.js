@@ -26,6 +26,7 @@ const assertArraysEqual = function(arrOne, arrTwo) {
 // return a new array not changing source array
 // new array doesnt have itemsToRemove
 
+//WORKS ONLY IF REMOVING ONE ELEMENT
 // const without = (source, itemsToRemove) => {
 //   let newArr = [];
 //   for (let sourceItem of source) {
@@ -38,29 +39,44 @@ const assertArraysEqual = function(arrOne, arrTwo) {
 //   return (newArr);
 // };
 
-// Uses .indexOf to remove array element => DOESN'T WORK
-// ITEM INDEX CHANGES AS THINGS ARE DELETED WITH SPLICE
+// // Uses .indexOf to remove array element => DOESN'T WORK
+// // ITEM INDEX CHANGES AS THINGS ARE DELETED WITH SPLICE
+// const without = (source, itemsToRemove) => {
+//   let newArr = [];
+//   // loop through both arrays
+//   for (let sourceItem of source) {
+//     for (let removeItem of itemsToRemove) {
+//       if (removeItem === sourceItem) {
+//         let itemIndex = source.indexOf(removeItem);
+//         newArr = source.splice(itemIndex, 1);
+//       }
+//     }
+//   }
+//   return newArr;
+//   // if elements === each other, find indexOf
+//   // use splice to remove that element
+//   //return new array
+// };
+
+//USE FILTER METHOD => WORKS!!
 const without = (source, itemsToRemove) => {
-  let newArr = [];
-  // loop through both arrays
+  let filteredList = [];
   for (let sourceItem of source) {
     for (let removeItem of itemsToRemove) {
       if (removeItem === sourceItem) {
-        let itemIndex = source.indexOf(removeItem);
-        newArr = source.splice(itemIndex, 1);
+        filteredList = source.filter(function(value) {
+          return value !== removeItem;
+        });
       }
     }
   }
-  return newArr;
-  // if elements === each other, find indexOf
-  // use splice to remove that element
-  //return new array
+  return filteredList;
 };
-
 
 // Test cases
 console.log(without([1, 2, 3], [1])); // => [2, 3]
 console.log(without([1, 2, 3, 1], [1])); // => [2, 3]
+console.log(without([1, 2, 3, "1"], [1])); // => [2, 3, '1']
 console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
 
 const words = ["hello", "world", "lighthouse"];
