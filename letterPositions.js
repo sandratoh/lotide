@@ -28,13 +28,19 @@ const assertArraysEqual = (arrOne, arrTwo) => {
 // ACTUAL FUNCTION
 const letterPositions = sentence => {
   const results = {};
+  let letterIndex = [];
   // loop through string
   for (let letter of sentence) {
     // if statement to skip spaces
     if (letter !== ' ') {
       // add key value to object
-      if (results.letter) {
-
+      if (results[letter]) {
+        // find index in sentence and push to index arr
+        letterIndex.push(sentence.indexOf(letter));
+        results[letter] += letterIndex;
+      } else {
+        results[letter] = letterIndex.push(sentence.indexOf(letter));
+        console.log(results);
       }
     }
   }
