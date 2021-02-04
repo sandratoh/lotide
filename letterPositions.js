@@ -12,7 +12,7 @@ const eqArrays = (arrOne, arrTwo) => {
 };
 
 // ASSERTION FUNCTIONS FOR ARRAYS
-const assertArraysEqual = function(arrOne, arrTwo) {
+const assertArraysEqual = (arrOne, arrTwo) => {
   if (eqArrays(arrOne, arrTwo)) {
     console.log(`✅✅✅ Assertion Passed: ${arrOne} === ${arrTwo}`);
   } else {
@@ -26,20 +26,29 @@ const assertArraysEqual = function(arrOne, arrTwo) {
 // Multiple instances possible so use array in object
 
 // ACTUAL FUNCTION
-const letterPositions = function(sentence) {
+const letterPositions = sentence => {
   const results = {};
-  // logic to update results here
+  // loop through string
+  for (let letter of sentence) {
+    // if statement to skip spaces
+    if (letter !== ' ') {
+      // add key value to object
+      if (results.letter) {
+
+      }
+    }
+  }
   return results;
 };
 
 // TEST CODES
 const testStr = 'hello';
 
-let result = letterPositions(testStr);
+let testResult = letterPositions(testStr);
 
-console.log(result);
+console.log(testResult);
 
-assertArraysEqual(result.h, [0]);
-assertArraysEqual(result.e, [1]);
-assertArraysEqual(result.l, [2, 3]);
-assertArraysEqual(result.o, [4]);
+assertArraysEqual(testResult.h, [0]);
+assertArraysEqual(testResult.e, [1]);
+assertArraysEqual(testResult.l, [2, 3]);
+assertArraysEqual(testResult.o, [4]);
