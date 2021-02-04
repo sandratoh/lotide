@@ -33,15 +33,20 @@ const eqObjects = function(object1, object2) {
     return false;
   }
   // loop through object1
-  // if key-value pairs are different, return false
-  for (let key1 of key1Arr) {
-    if (object1[key1] !== object2[key1]) {
+  for (let key of key1Arr) {
+    // if value is an array, use these codes with eqArrays function
+    // console.log('Value of key1Arr is an array ' + Array.isArray(object1[key]));
+    // console.log('Value of key2Arr is an array ' + Array.isArray(object2[key]));
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      return eqArrays(object1[key], object2[key]);
+    }
+    // if key-value pairs are different, return false
+    if (object1[key] !== object2[key]) {
       return false;
     }
-    return true;
   }
+  return true;
 };
-
 
 // TEST CODES
 // Primitive Values
