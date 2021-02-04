@@ -43,16 +43,11 @@ const countLetters = (string) => {
 console.log(countLetters('LHL'));
 console.log(countLetters('hello world'));
 
-assertEqual(countLetters('LHL'), { L: 2, H: 1});
-assertEqual(countLetters('lighthouse labs'), {
-  l: 1,
-  i: 2,
-  g: 1,
-  h: 4,
-  t: 2,
-  o: 2,
-  u: 2,
-  s: 2,
-  e: 3,
-  n: 1,
-});
+const testStr = 'hello world';
+
+let result = countLetters(testStr);
+
+assertEqual(result["h"], 1);
+assertEqual(result["l"], 3);
+assertEqual(result["o"], 2);
+assertEqual(result["a"], undefined);
