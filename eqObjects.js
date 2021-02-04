@@ -11,7 +11,6 @@ const assertEqual = function(actual, expected) {
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 
-
 // ACTUAL eqObjects FUNCTION
 const eqObjects = function(object1, object2) {
   // stop function if length is different
@@ -21,15 +20,13 @@ const eqObjects = function(object1, object2) {
     return false;
   }
   // loop through object1
-  for (let key1 in object1) {
-    if (object1[])
+  // if key-value pairs are different, return false
+  for (let key1 of key1Arr) {
+    if (object1[key1] !== object2[key1]) {
+      return false;
+    }
+    return true;
   }
-    // loop through object2
-  for (let key2 in object2) {
-    // if key-value pairs are different, return false
-    if (object2[key2])
-  }
-  
 };
 
 
