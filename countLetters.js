@@ -19,10 +19,25 @@ const assertEqual = function(actual, expected) {
 //  Add character of string as object key
 //  Counter increases if condition is true
 //  Default is +1 in order to make the key
-//  Ignore if space
+//  Ignore space between characters in strings
 // End Loop
 // Return object
 // End Function
+
+// ACTUAL FUNCTION
+const countLetters = (string) => {
+  let letterCount = {};
+  // Removes spaces in string
+  let letters = string.replace(/\s+/g, '');
+  for (let letter of letters) {
+    if (letterCount[letter]) {
+      letterCount[letter] ++;
+    } else {
+      letterCount[letter] = 1;
+    }
+  }
+  return letterCount;
+};
 
 // TEST CASES
 console.log(countLetters('LHL'));
