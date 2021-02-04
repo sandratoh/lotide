@@ -39,6 +39,11 @@ const countLetters = (string) => {
   return letterCount;
 };
 
+// NOTES
+// Instead of removing spaces
+// Can also use if statement and skip space
+// if(string[i] !== ' ') {}
+
 // TEST CASES
 console.log(countLetters('LHL'));
 console.log(countLetters('hello world'));
