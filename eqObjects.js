@@ -7,11 +7,24 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// ARRAY COMPARISON FUNCTION
+const eqArrays = (arrOne, arrTwo) => {
+  if (arrOne.length !== arrTwo.length) {
+    return false;
+  }
+  for (let i = 0; i < arrOne.length; i++) {
+    if (arrOne[i] !== arrTwo[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
 // CHALLENGE
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 
-// ACTUAL eqObjects FUNCTION
+// ACTUAL OBJECT COMPARISON FUNCTION
 const eqObjects = function(object1, object2) {
   // stop function if length is different
   let key1Arr = Object.keys(object1);
@@ -43,8 +56,8 @@ assertEqual(eqObjects(ab, ba), true);
 assertEqual(eqObjects(ab, abc), false);
 
 // Array Values
-const cd = { c: '1', d: ['2, 3']};
-const dc = { d: ['2', 3], c: '1'};
+const cd = { c: '1', d: ['2', 3] };
+const dc = { d: ['2', 3], c: '1' };
 eqObjects(cd, dc); // => true
 
 const cd2 = { c: '1', d: ['2', 3, 4] };
