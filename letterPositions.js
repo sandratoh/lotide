@@ -34,12 +34,15 @@ const letterPositions = sentence => {
     // if statement to skip spaces
     if (letter !== ' ') {
       // add key value to object
-      if (results[letter]) {
+      if (results[letter] && sentence.indexOf(letter) !== letterIndex) {
         // find index in sentence and push to index arr
         letterIndex.push(sentence.indexOf(letter));
-        results[letter] += letterIndex;
+        results[letter] = letterIndex;
+        // letterIndex.push(sentence.indexOf(letter));
+        // results[letter] += letterIndex;
       } else {
-        results[letter] = letterIndex.push(sentence.indexOf(letter));
+        letterIndex = [(sentence.indexOf(letter))];
+        results[letter] = letterIndex;
         console.log(results);
       }
     }
