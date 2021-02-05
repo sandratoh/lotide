@@ -6,7 +6,15 @@
 
 // ACTUAL FUNCTION
 const takeUntil = (array, callback) => {
-
+  let newArr = [];
+  for (let elem of array) {
+    if (!callback(elem)) {
+      newArr.push(elem);
+    } else {
+      return newArr;
+    }
+  }
+  return newArr;
 };
 
 // ASSERTION CODES
