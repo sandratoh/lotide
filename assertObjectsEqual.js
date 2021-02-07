@@ -34,3 +34,6 @@ const assertObjectsEqual = (actualObj, expectedObj) => {
 // Test cases:
 assertObjectsEqual({ a : 1 }, { a : 1});
 assertObjectsEqual({ a : 1 }, { a : '1'});
+
+// Export function:
+module.exports(assertObjectsEqual);
