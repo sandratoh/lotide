@@ -36,4 +36,13 @@ assertObjectsEqual({ a : 1 }, { a : 1});
 assertObjectsEqual({ a : 1 }, { a : '1'});
 
 // Export function:
-module.exports(assertObjectsEqual);
+module.exports = {
+  assertObjectsEqual: (actualObj, expectedObj) => {
+    const inspect = require('util').inspect;
+    if (eqObjects(actualObj, expectedObj)) {
+      console.log(`✅✅✅ Assertion Passed: ${inspect(actualObj)} === ${inspect(expectedObj)}`);
+    } else {
+      console.log(`⛔️⛔️⛔️ Assertion Failed: ${inspect(actualObj)} !== ${inspect(expectedObj)}`);
+    }
+  }
+};

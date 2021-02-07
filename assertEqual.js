@@ -16,4 +16,12 @@ assertEqual('45', 45);
 assertEqual('45', '45');
 
 // Export function:
-module.exports(assertEqual);
+module.exports = {
+  assertEqual: function(actual, expected) {
+    if (actual === expected) {
+      console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+    } else {
+      console.log(`⛔️⛔️⛔️ Assertion Failed: ${actual} !== ${expected}`);
+    }
+  }
+};
