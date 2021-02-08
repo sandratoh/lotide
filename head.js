@@ -1,5 +1,5 @@
-// IMPORT ASSERTION FUNCTION
-const assertEqual = require('./assertEqual');
+// // IMPORT ASSERTION FUNCTION
+// const assertEqual = require('./assertEqual');
 
 //ASSERTION FUNCTION
 // const assertEqual = function(actual, expected) {
