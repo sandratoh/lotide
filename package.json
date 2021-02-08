@@ -1,0 +1,26 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "Lighthouse Labs Lotide Library",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandratoh/lotide.git"
+  },
+  "author": "Sandra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandratoh/lotide/issues"
+  },
+  "homepage": "https://github.com/sandratoh/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.2.1"
+  }
+}
