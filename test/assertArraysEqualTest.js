@@ -1,4 +1,5 @@
-const eqArrays = require('../eqArrays');
+// Dont't need eqArrays in test file because already in assertArraysEqual file
+// const eqArrays = require('../eqArrays');
 
 const assertArraysEqual = require('../assertArraysEqual');
 
