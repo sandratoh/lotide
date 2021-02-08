@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@sandratoh/lotide",
   "version": "1.0.0",
-  "description": "Lighthouse Labs Lotide Library",
+  "description": "Simplified student version of the Lodash library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/sandratoh/lotide.git"
   },
-  "author": "Sandra",
+  "author": "Sandra To",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sandratoh/lotide/issues"
