@@ -11,15 +11,15 @@ const eqObjects          = require('./eqObjects');
 const assertObjectsEqual = require('./assertObjectsEqual');
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
+  head,
+  tail,
+  middle,
 
-  assertEqual: assertEqual,
+  assertEqual,
 
-  eqArrays:          eqArrays,
-  assertArraysEqual: assertArraysEqual,
+  eqArrays,
+  assertArraysEqual,
   
-  eqObjects:          eqObjects,
-  assertObjectsEqual: assertObjectsEqual,
+  eqObjects,
+  assertObjectsEqual,
 };
