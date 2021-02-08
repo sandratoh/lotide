@@ -2,7 +2,7 @@ const { assert } = require('chai');
 // same as
 // const assert = require('chai').assert;
 
-const assertEqual = require('../assertEqual');
+// const assertEqual = require('../assertEqual');
 
 const tail = require('../tail');
 
