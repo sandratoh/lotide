@@ -34,3 +34,7 @@ The following functions are currently implemented:
 * `assertArraysEqual(actual, expected)`: assert array values using `eqArrays` as callback
 * `eqObjects(object1, object2)`: returns true if both objects have identifical keys with identical values
 * `assertObjectsEqual(actual, expected)`: assert object values using `eqObjects` as callback
+* `findKeyByValue`: returns the first key of a given value in an object
+* `letterPositions`: returns an object with key-value pairs of each character in a string
+* `countOnly`: returns an object containing counts of everything in the array that the input object listed
+* `flatten`: returns a new array with flattened elements given an array with onen nested layer
