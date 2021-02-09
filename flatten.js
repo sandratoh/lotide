@@ -1,25 +1,10 @@
 // eqArrays function
-const eqArrays = (arrOne, arrTwo) => {
-  if (arrOne.length !== arrTwo.length) {
-    return false;
-  }
-  for (let i = 0; i < arrOne.length; i++) {
-    if (arrOne[i] !== arrTwo[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+// const eqArrays = require('./eqArrays');
 
 // assertion function for arrays
-const assertArraysEqual = function(arrOne, arrTwo) {
-  if (eqArrays(arrOne, arrTwo)) {
-    console.log(`✅✅✅ Assertion Passed: ${arrOne} === ${arrTwo}`);
-  } else {
-    console.log(`⛔️⛔️⛔️ Assertion Failed: ${arrOne} !== ${arrTwo}`);
-  }
-};
+// const assertArraysEqual = require('./assertArraysEqual');
 
+// Iteration method
 const flatten = (arr) => {
   let newArr = [];
   for (let elem of arr) {
@@ -34,6 +19,5 @@ const flatten = (arr) => {
   return newArr;
 };
 
-// console.log(flatten([1, 2, [ 3, 4], 5, [6]]));
 
-assertArraysEqual(flatten([1, 2, [ 3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+module.exports = flatten;
