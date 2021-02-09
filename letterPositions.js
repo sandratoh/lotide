@@ -1,5 +1,5 @@
 // ASSERTION FUNCTIONS
-const assertArraysEqual = require('./assertArraysEqual');
+// const assertArraysEqual = require('./assertArraysEqual');
 
 // CHALLENGE
 // Input: String
@@ -28,14 +28,14 @@ const letterPositions = sentence => {
 // Export function
 module.exports = letterPositions;
 
-// TEST CODES
-const testStr = 'hello';
+// // TEST CODES
+// const testStr = 'hello';
 
-let testResult = letterPositions(testStr);
+// let testResult = letterPositions(testStr);
 
-// console.log(testResult);
+// // console.log(testResult);
 
-assertArraysEqual(testResult.h, [0]);
-assertArraysEqual(testResult.e, [1]);
-assertArraysEqual(testResult.l, [2, 3]);
-assertArraysEqual(testResult.o, [4]);
+// assertArraysEqual(testResult.h, [0]);
+// assertArraysEqual(testResult.e, [1]);
+// assertArraysEqual(testResult.l, [2, 3]);
+// assertArraysEqual(testResult.o, [4]);
